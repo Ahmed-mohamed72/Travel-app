@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:travel_app1/misc/colors.dart';
 import 'package:travel_app1/widgets/app_large_text.dart';
 import 'package:travel_app1/widgets/app_text.dart';
+import 'package:travel_app1/widgets/custom_slide_dots.dart';
+import 'package:travel_app1/widgets/responsive_button.dart';
 
 class WelcomView extends StatefulWidget {
   const WelcomView({super.key});
@@ -38,19 +40,20 @@ class _WelcomViewState extends State<WelcomView> {
                 ),
               ),
               child: Container(
-                margin: const EdgeInsets.only(top: 150, right: 20, left: 20),
+                margin: const EdgeInsets.only(top: 120, right: 20, left: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const AppLargeText(
                           text: "Trips",
-                          size: 32,
+                          size: 30,
                         ),
                         const AppText(
                           text: "Mountain",
-                          size: 32,
+                          size: 30,
                         ),
                         const SizedBox(
                           height: 20,
@@ -62,9 +65,14 @@ class _WelcomViewState extends State<WelcomView> {
                             color: AppColors.textColor2,
                             size: 15,
                           ),
-                        )
+                        ),
+                        const SizedBox(height: 35),
+                        const ResponsiveButton(
+                          width: 105,
+                        ),
                       ],
-                    )
+                    ),
+                    CustomSlideDots(index: index)
                   ],
                 ),
               ),
