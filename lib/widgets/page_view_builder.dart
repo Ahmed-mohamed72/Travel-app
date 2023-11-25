@@ -6,12 +6,14 @@ class PageViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
-      itemCount: 3,
-      scrollDirection: Axis.vertical,
-      itemBuilder: (context, index) {
-        return WelcomViewCompononts(index: index);
-      },
+    return Scaffold(
+      body: PageView.builder(
+        itemCount: 3,
+        scrollDirection: Axis.vertical,
+        itemBuilder: (context, index) {
+          return WelcomViewCompononts(index: index);
+        },
+      ),
     );
   }
 }
