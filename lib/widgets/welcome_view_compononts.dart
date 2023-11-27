@@ -10,7 +10,7 @@ class WelcomViewCompononts extends StatelessWidget {
     final List images = [
       "welcome-one.png",
       "welcome-two.png",
-      "welcome-three.png",
+      "ice.jpg",
     ];
 
     return Container(

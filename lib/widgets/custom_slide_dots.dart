@@ -13,7 +13,7 @@ class CustomSlideDots extends StatelessWidget {
         (indexOfDots) {
           return Container(
             margin: const EdgeInsets.only(bottom: 3),
-            width: 8,
+            width: 7,
             height: indexOfDots == index ? 25 : 8,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
