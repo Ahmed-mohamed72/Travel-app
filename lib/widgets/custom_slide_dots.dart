@@ -16,10 +16,11 @@ class CustomSlideDots extends StatelessWidget {
             width: 7,
             height: indexOfDots == index ? 25 : 8,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: indexOfDots == index
-                    ? AppColors.mainColor
-                    : AppColors.mainColor.withOpacity(0.4)),
+              borderRadius: BorderRadius.circular(8),
+              color: indexOfDots == index
+                  ? AppColors.mainColor
+                  : AppColors.mainColor.withOpacity(0.4),
+            ),
           );
         },
       ),
