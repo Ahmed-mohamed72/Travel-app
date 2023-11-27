@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app1/views/nav_views/main_view.dart';
 import 'package:travel_app1/views/welcom_view.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class TravelApp extends StatelessWidget {
               iconTheme: IconThemeData(color: Colors.black),
               elevation: 0,
               backgroundColor: Colors.white)),
-      home: const WelcomView(),
+      home: const MainView(),
     );
   }
 }
