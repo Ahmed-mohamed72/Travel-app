@@ -8,6 +8,5 @@ class SearhcView extends StatelessWidget {
     return Container(
       child: Center(child: Text("Search View")),
     );
-    ;
   }
 }
