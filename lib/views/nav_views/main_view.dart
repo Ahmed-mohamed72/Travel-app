@@ -13,13 +13,30 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   List pages = const [HomeView(), BarItemView(), SearhcView(), MyView()];
+  int currentIndex = 0;
+  void onTap(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[0],
+      backgroundColor: Colors.white,
+      body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.black87,
-          unselectedItemColor: Colors.grey,
+          backgroundColor: Colors.white,
+          selectedFontSize: 0,
+          unselectedFontSize: 0,
+          type: BottomNavigationBarType.fixed,
+          onTap: onTap,
+          currentIndex: currentIndex,
+          elevation: 0,
+          selectedItemColor: Colors.black54,
+          unselectedItemColor: Colors.grey.withOpacity(0.5),
+          showUnselectedLabels: false,
+          showSelectedLabels: false,
           items: const [
             BottomNavigationBarItem(label: "Home", icon: Icon(Icons.apps)),
             BottomNavigationBarItem(
