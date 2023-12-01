@@ -13,6 +13,7 @@ class DetailView extends StatefulWidget {
 
 class _DetailViewState extends State<DetailView> {
   int currentStar = 4;
+  int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,14 +140,28 @@ class _DetailViewState extends State<DetailView> {
                     ),
                     const SizedBox(height: 10),
                     Wrap(
-                      spacing: 0.5,
+                      spacing: 10,
                       children: List.generate(5, (index) {
-                        return AppButtons(
-                            text: index.toString(),
-                            dataColor: Colors.black,
-                            backgroundColor: AppColors.mainTextColor,
-                            borderColor: AppColors.mainTextColor,
-                            size: 55);
+                        return InkWell(
+                          onTap: () {
+                            setState(() {
+                              selectedIndex = index;
+                            });
+                          },
+                          child: AppButtons(
+                            text: (index + 1).toString(),
+                            dataColor: selectedIndex == index
+                                ? Colors.white
+                                : Colors.black,
+                            backgroundColor: selectedIndex == index
+                                ? Colors.black
+                                : AppColors.buttonBackground,
+                            borderColor: selectedIndex == index
+                                ? Colors.black
+                                : AppColors.buttonBackground,
+                            size: 55,
+                          ),
+                        );
                       }),
                     )
                   ],
