@@ -3,6 +3,7 @@ import 'package:travel_app1/misc/colors.dart';
 import 'package:travel_app1/widgets/app_buttons.dart';
 import 'package:travel_app1/widgets/app_large_text.dart';
 import 'package:travel_app1/widgets/app_text.dart';
+import 'package:travel_app1/widgets/responsive_button.dart';
 
 class DetailView extends StatefulWidget {
   const DetailView({super.key});
@@ -62,7 +63,7 @@ class _DetailViewState extends State<DetailView> {
               ),
             ),
             Positioned(
-              top: 320,
+              top: 280,
               child: Container(
                 padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
                 width: MediaQuery.of(context).size.width,
@@ -128,17 +129,18 @@ class _DetailViewState extends State<DetailView> {
                         )
                       ],
                     ),
-                    const SizedBox(height: 22),
-                    const AppLargeText(
+                    const SizedBox(height: 15),
+                    AppLargeText(
                       text: "People",
-                      size: 24,
+                      size: 22,
+                      color: Colors.black.withOpacity(0.9),
                     ),
-                    const SizedBox(height: 5),
+                    const SizedBox(height: 8),
                     AppText(
                       text: "Number of people in your group",
                       color: AppColors.mainTextColor,
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 12),
                     Wrap(
                       spacing: 10,
                       children: List.generate(5, (index) {
@@ -163,9 +165,41 @@ class _DetailViewState extends State<DetailView> {
                           ),
                         );
                       }),
+                    ),
+                    const SizedBox(height: 15),
+                    AppLargeText(
+                      text: "Description",
+                      color: Colors.black.withOpacity(0.9),
+                      size: 22,
+                    ),
+                    const SizedBox(height: 10),
+                    AppText(
+                      text:
+                          "Yosemite national park is location in centeral serial Navada in US state of California . it is location near the wide protected area",
+                      color: AppColors.mainTextColor,
                     )
                   ],
                 ),
+              ),
+            ),
+            Positioned(
+              top: 665,
+              left: 20,
+              right: 20,
+              child: Row(
+                children: [
+                  AppButtons(
+                      dataColor: AppColors.textColor1,
+                      backgroundColor: Colors.white,
+                      borderColor: AppColors.textColor1,
+                      size: 60,
+                      isIcon: true,
+                      icon: Icons.favorite_outline),
+                  const SizedBox(width: 30),
+                  const ResponsiveButton(
+                    isResponsive: true,
+                  )
+                ],
               ),
             )
           ],
