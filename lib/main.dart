@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app1/views/detail_view.dart';
 import 'package:travel_app1/views/nav_views/main_view.dart';
 import 'package:travel_app1/views/welcom_view.dart';
 
@@ -13,14 +14,13 @@ class TravelApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-              iconTheme: IconThemeData(color: Colors.black),
-              elevation: 0,
-              backgroundColor: Colors.white)),
-      home: const MainView(),
-    );
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+                iconTheme: IconThemeData(color: Colors.black),
+                elevation: 0,
+                backgroundColor: Colors.white)),
+        home: const DetailView());
   }
 }

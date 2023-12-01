@@ -17,7 +17,7 @@ class AppLargeText extends StatelessWidget {
       style: TextStyle(
         fontSize: size,
         color: color,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w500,
       ),
     );
   }
