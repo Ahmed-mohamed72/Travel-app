@@ -19,7 +19,7 @@ class _DetailViewState extends State<DetailView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         width: double.maxFinite,
         height: double.maxFinite,
         child: Stack(
@@ -201,7 +201,7 @@ class _DetailViewState extends State<DetailView> {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
